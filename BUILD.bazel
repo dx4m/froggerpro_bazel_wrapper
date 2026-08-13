@@ -1,0 +1,28 @@
+load("//build/kernel/kleaf:kernel.bzl", "kernel_build")
+
+package(default_visibility = ["//visibility:public"])
+
+alias(
+    name = "kernel",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+
+alias(
+    name = "kernel_ksu",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+
+alias(
+    name = "kernel_ksun",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+
+alias(
+    name = "kernel_resukisu",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+
+alias(
+    name = "kernel_sukisu",
+    actual = "//msm-kernel:sun_perf_dist",
+)
