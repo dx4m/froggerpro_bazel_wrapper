@@ -1,6 +1,5 @@
 #!/bin/bash
-# froggerpro/build/bazel.sh -> linked as tools/bazel via manifest.xml symlink
-# SPDX-License-Identifier: GPL-2.0
+# SPDX-License-Identifier: GPL-3.0
 set -e
 set -E  # Inherit ERR trap in functions
 
