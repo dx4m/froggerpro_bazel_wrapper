@@ -27,3 +27,24 @@ alias(
     name = "kernel_sukisu",
     actual = "//msm-kernel:sun_perf_dist",
 )
+
+alias(
+    name = "kernel_ksu_susfs",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+
+alias(
+    name = "kernel_ksun_susfs",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+
+alias(
+    name = "kernel_resukisu_susfs",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+
+alias(
+    name = "kernel_sukisu_susfs",
+    actual = "//msm-kernel:sun_perf_dist",
+)
+

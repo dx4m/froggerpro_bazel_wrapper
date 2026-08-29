@@ -1,4 +1,6 @@
 .froggerpro_patched
 .ksu_active
 .ksu_variant
+.susfs4ksu_cache
+.noclean
 avb_sign_key.key
