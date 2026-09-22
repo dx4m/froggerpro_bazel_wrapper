@@ -161,6 +161,9 @@ _frogger_sign_boot() {
 
     local rollback_index=$(_get_sign_config "rollback_index" "0")
     local props=$(_get_sign_config "props" "")
+    local partition_size=$(_get_sign_config "partition_size" "")
+    local partition_name=$(_get_sign_config "partition_name" "boot")
+    local algorithm=$(_get_sign_config "algorithm" "SHA256_RSA4096")
 
     echo "==> [AVB] Config: rollback_index=${rollback_index}"
     if [ -n "${props}" ]; then
@@ -184,13 +187,12 @@ _frogger_sign_boot() {
     fi
 
     echo "==> [AVB] Signing boot.img with selected key"
-    # shellcheck disable=SC2086
     "${AVBTOOL}" add_hash_footer \
         --image="${boot_img}" \
-        --partition_name="boot" \
-        --partition_size=100663296 \
+        --partition_name="${partition_name}" \
+	--partition_size="${partition_size}" \
         --key="${avb_key}" \
-        --algorithm="SHA256_RSA4096" \
+        --algorithm="${algorithm}" \
         --rollback_index="${rollback_index}" \
         ${prop_args} || {
         echo "ERROR: AVB signing failed" >&2
