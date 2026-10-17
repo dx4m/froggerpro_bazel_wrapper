@@ -12,7 +12,7 @@ tools/bazel run --config=stamp //froggerpro:kernel
 tools/bazel run --config=stamp //froggerpro:kernel_ksu
 tools/bazel run --config=stamp //froggerpro:kernel_ksun
 tools/bazel run --config=stamp //froggerpro:kernel_sukisu
-tools/bazel run --config=stamp //froggerpro:kernel_resukisu
+tools/bazel run --config=stamp //froggerpro:kernel_bakasu
 ```
 ## Configuration
 
