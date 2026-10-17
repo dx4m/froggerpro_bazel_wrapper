@@ -19,7 +19,7 @@ alias(
 )
 
 alias(
-    name = "kernel_resukisu",
+    name = "kernel_bakasu",
     actual = "//msm-kernel:sun_perf_dist",
 )
 
@@ -39,7 +39,7 @@ alias(
 )
 
 alias(
-    name = "kernel_resukisu_susfs",
+    name = "kernel_bakasu_susfs",
     actual = "//msm-kernel:sun_perf_dist",
 )
 

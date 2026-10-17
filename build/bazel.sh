@@ -331,7 +331,7 @@ _frogger_susfs_patch() {
 	else
 		echo "==> [SUSFS] Warning: KSU hook patch not found, skipping (fork may be pre-integrated)."
 	fi
-    elif [ "${variant}" = "ksun" ] || [ "${variant}" = "resukisu" ] || [ "${variant}" = "sukisu" ]; then
+    elif [ "${variant}" = "ksun" ] || [ "${variant}" = "bakasu" ] || [ "${variant}" = "sukisu" ]; then
         echo "==> [SUSFS] ${variant} uses integrated patches, skipping SUSFS hook patch."
     fi
     
@@ -390,14 +390,14 @@ _frogger_ksu_patch() {
             variant="sukisu"
             ksu_url="https://raw.githubusercontent.com/sukisu-ultra/sukisu-ultra/main/kernel/setup.sh"
             ;;
-        *//froggerpro:kernel_resukisu_susfs)
-            variant="resukisu"
+        *//froggerpro:kernel_bakasu_susfs)
+            variant="bakasu"
             susfs_enabled=1
-            ksu_url="https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh"
+            ksu_url="https://raw.githubusercontent.com/Baka-SU/BakaSU/refs/heads/main/kernel/setup.sh"
             ;;
-        *//froggerpro:kernel_resukisu)
-            variant="resukisu"
-            ksu_url="https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh"
+        *//froggerpro:kernel_bakasu)
+            variant="bakasu"
+            ksu_url="https://raw.githubusercontent.com/Baka-SU/BakaSU/refs/heads/main/kernel/setup.sh"
             ;;
         *)
             echo "ERROR: Unknown KSU variant in target: $target" >&2
@@ -511,7 +511,7 @@ if [[ "${_ACTION}" == "build" || "${_ACTION}" == "run" ]]; then
                     *//froggerpro:kernel_ksu|*//froggerpro:kernel_ksu_susfs| \
                     *//froggerpro:kernel_ksun|*//froggerpro:kernel_ksun_susfs| \
                     *//froggerpro:kernel_sukisu|*//froggerpro:kernel_sukisu_susfs| \
-                    *//froggerpro:kernel_resukisu|*//froggerpro:kernel_resukisu_susfs)
+                    *//froggerpro:kernel_bakasu|*//froggerpro:kernel_bakasu_susfs)
                         _KSU_TARGET_FOUND=1
                         _frogger_ksu_patch "$arg"
                         ;;
